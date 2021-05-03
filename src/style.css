@@ -1,0 +1,90 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: #95a5a5;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+}
+h2 {
+  color: #95a5a5;
+  font-size: 15px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1;
+  opacity: 0.7;
+}
+li {
+  list-style: none;
+  color: #95a5a5;
+}
+
+a {
+  text-decoration: none;
+  color: #95a5a5;
+  font-weight: 800;
+}
+
+footer {
+  color: #95a5a5;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+.form-control {
+  margin-bottom: 20px;
+}
+.row {
+  margin-bottom: 20px;
+}
+
+.day {
+  color: #95a5a5;
+  font-size: 25px;
+  line-height: 1;
+  opacity: 0.7;
+}
+.time {
+  color: #95a5a5;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.7;
+}
+.temperature {
+  font-size: 38px;
+  font-weight: 800;
+}
+.weather.now {
+  width: 200px;
+}
+.btn-search {
+  background-color: #d4dcdf;
+  margin-bottom: 20px;
+  border: none #d4dcdf;
+  border-radius: 3px;
+}
+.btn-location {
+  background-color: #9fc9d3;
+  margin-bottom: 20px;
+  border: none #9fc9d3;
+  border-radius: 3px;
+}
+.card-title {
+  color: #95a5a5;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.forecast {
+  margin-bottom: 20px;
+}

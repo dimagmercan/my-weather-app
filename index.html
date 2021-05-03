@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container border border-2 rounded p-3">
+      <div class="row">
+        <div class="col-12">
+            <form id="search-form">
+            <div class="input-group mb-3">
+                <input type="search" class="form-control" placeholder="Search places" aria-label="Search places" aria-describedby="button-addon2" id="search-text-input">
+                <button class="btn-search" type="button" id="search-button">🔍</button>
+                <button class="btn-location" type="button" id="location-button">📍</button>
+            </form>
+            </div>
+    </div>
+
+      <div class="row">
+        <div class="col-4">
+        <h1 id="city">Location</h1>
+            <p class="day" id="day">
+            2 April 2021, Friday <br>
+            </p>
+            <p class="time" id="time">
+            13:46
+            </p>
+        </div>
+        <div class="col-4">
+          <h2> <span class="temperature" id="temperature">13</span><span class="units">°C | <a href="#" id="fahrenheit">°F</a></span></h2>
+          <ul>
+            <li>Feels like <span id="feels-like">8</span>°</li>
+            <li><span id="description">Sunny</span></li>
+            <li>Day <span id="temp-max">15</span>°↑ Night <span id="temp-min">3</span>°↓</li>
+          </ul>
+        </div>
+        
+        <div class="col-4">
+          <img src="images/svg/001-sunny.svg" class="weather-now" width="150px"/>
+        </div>
+      </div>
+     <div class="row">
+          <div class="col-sm">
+            <div class="card text-center">
+              <div class="card-body">
+                <h4 class="card-title">Monday</h4>
+                <img src="images/svg/018-snowflake.svg" width="50px" class="forecast" />
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <strong>8°</strong> 1°
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="card text-center">
+              <div class="card-body">
+                <h4 class="card-title">Tuesday</h4>
+                <img src="images/svg/007-snow.svg" width="50px" class="forecast" />
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <strong>4°</strong> -1°
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="card text-center">
+              <div class="card-body">
+                <h4 class="card-title">Wednesday</h4>
+                <img src="images/svg/007-snow.svg" width="50px" class="forecast" />
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <strong>2°</strong> -3°
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="card text-center">
+              <div class="card-body">
+                <h4 class="card-title">Thursday</h4>
+                <img src="images/svg/004-rain.svg" width="50px" class="forecast" />
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <strong>5°</strong> 0°
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="card text-center">
+              <div class="card-body">
+                <h4 class="card-title">Friday</h4>
+                <img src="images/svg/020-cloudy.svg" width="50px" class="forecast" />
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <strong>5°</strong> 0°
+                </h6>
+              </div>
+            </div>
+          </div>  
+    </div>
+
+  
+  <footer>
+          <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>
+          <div>Coded by <a href="https://www.linkedin.com/in/dimagmercan/" target="_blank"> Dimag Mercan</a></div>
+</footer>
+<script src="src/script.js"></script>
+</body>
+</html>
