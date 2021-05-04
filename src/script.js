@@ -29,8 +29,13 @@ let months = [
 ];
 let month = months[now.getMonth()];
 let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 let hour = now.getHours();
-
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 let pDay = document.querySelector("p.day");
 pDay.innerHTML = `${date} ${month} ${year} ${day}`;
 let pTime = document.querySelector("p.time");
