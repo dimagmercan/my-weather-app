@@ -5,9 +5,9 @@ let year = now.getFullYear();
 let days = [
   "Sunday",
   "Monday",
-  "Tueday",
+  "Tuesday",
   "Wednesday",
-  "Thuesday",
+  "Thursday",
   "Friday",
   "Saturday",
 ];
