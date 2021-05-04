@@ -22,6 +22,7 @@ ul {
 li {
   list-style: none;
   color: #95a5a5;
+  text-transform: capitalize;
 }
 
 a {
@@ -65,8 +66,8 @@ footer {
   font-size: 38px;
   font-weight: 800;
 }
+
 .weather.now {
-  width: 200px;
 }
 .btn-search {
   background-color: #d4dcdf;

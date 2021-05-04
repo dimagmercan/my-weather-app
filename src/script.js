@@ -48,7 +48,6 @@ let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", convertFahrenheit);
 
 function displayWeather(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -63,7 +62,10 @@ function displayWeather(response) {
     response.data.main.temp_min
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
 }
 function search(event) {
   event.preventDefault();
