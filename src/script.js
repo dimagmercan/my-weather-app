@@ -53,6 +53,7 @@ let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", convertFahrenheit);
 
 function displayWeather(response) {
+  console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -71,6 +72,12 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document
+    .querySelector("icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 function search(event) {
   event.preventDefault();
