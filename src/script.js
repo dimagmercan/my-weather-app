@@ -43,6 +43,11 @@ pTime.innerHTML = `${hour}:${minute}`;
 
 function displayWeather(response) {
   celsiusTemp = response.data.main.temp;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#feels-like").innerHTML = Math.round(
@@ -59,12 +64,6 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document
-    .querySelector("icon")
-    .setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
 }
 
 function search(city) {
