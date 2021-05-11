@@ -46,7 +46,7 @@ function displayWeather(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `images/svg/${response.data.weather[0].icon}`
+    `images/svg/${response.data.weather[0].icon}.svg`
   );
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
