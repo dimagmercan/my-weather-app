@@ -41,6 +41,37 @@ pDay.innerHTML = `${date} ${month} ${year} ${day}`;
 let pTime = document.querySelector("p.time");
 pTime.innerHTML = `${hour}:${minute}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tuesday", "Wednesday", "Thursday", "Friday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-sm">
+        <div class="card text-center">
+          <div class="card-body">
+            <h4 class="card-title">${day}</h4>
+            <img
+              src="images/svg/018-snowflake.svg"
+              width="50px"
+              class="forecast-img"
+            />
+            <h6 class="card-subtitle mb-2 text-muted">
+              <strong>8°</strong> 1°
+            </h6>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   celsiusTemp = response.data.main.temp;
   let iconElement = document.querySelector("#icon");
@@ -122,3 +153,4 @@ celsiusElement.addEventListener("click", convertCelsius);
 let celsiusTemp = null;
 
 search("New York");
+displayForecast();

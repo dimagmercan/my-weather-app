@@ -27,8 +27,9 @@
                 <button class="btn-location" type="button" id="location-button">📍</button>
             </div>
             </form>
+        </div>
     </div>
-</div>
+    
       <div class="row">
         <div class="col-4">
         <h1 id="city"></h1>
@@ -39,89 +40,30 @@
             13:46
             </p>
         </div>
+
         <div class="col-4">
           <h2> <span class="temperature" id="temperature"></span><span class="units"><a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span></h2>
-          <ul>
-            <li>Feels like <span id="feels-like"></span>°</li>
-            <li><span id="description">Sunny</span></li>
-            <li>Day <span id="temp-max"></span>°↑ Night <span id="temp-min"></span>°↓</li>
-            <li>Wind Speed: <span id="wind"></span> m/s</li>
-        
-        </ul>
+            <ul>
+                <li>Feels like <span id="feels-like"></span>°</li>
+                <li><span id="description">Sunny</span></li>
+                <li>Day <span id="temp-max"></span>°↑ Night <span id="temp-min"></span>°↓</li>
+                <li>Wind Speed: <span id="wind"></span> m/s</li>
+            </ul>
         </div>
         
-        <div class="col-4 ">
+        <div class="col-4">
           <img src="" width="150px" class="float-right" id="icon"/>
         </div>
       </div>
-     <div class="row">
-          <div class="col-sm">
-            <div class="card text-center">
-              <div class="card-body">
-                <h4 class="card-title">Monday</h4>
-                <img src="images/svg/018-snowflake.svg" width="50px" class="forecast" />
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <strong>8°</strong> 1°
-                </h6>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-sm">
-            <div class="card text-center">
-              <div class="card-body ">
-                <h4 class="card-title">Tuesday</h4>
-                <img src="images/svg/007-snow.svg" width="50px" class="forecast" />
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <strong>4°</strong> -1°
-                </h6>
-              </div>
-            </div>
-          </div>
+     <div class="forecast-container" id="forecast">
+     </div>
 
-          <div class="col-sm">
-            <div class="card text-center">
-              <div class="card-body">
-                <h4 class="card-title">Wednesday</h4>
-                <img src="images/svg/007-snow.svg" width="50px" class="forecast" />
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <strong>2°</strong> -3°
-                </h6>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm">
-            <div class="card text-center">
-              <div class="card-body">
-                <h4 class="card-title">Thursday</h4>
-                <img src="images/svg/004-rain.svg" width="50px" class="forecast" />
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <strong>5°</strong> 0°
-                </h6>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm">
-            <div class="card text-center">
-              <div class="card-body">
-                <h4 class="card-title">Friday</h4>
-                <img src="images/svg/020-cloudy.svg" width="50px" class="forecast" />
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <strong>5°</strong> 0°
-                </h6>
-              </div>
-            </div>
-          </div>  
-    </div>
-
-  
 <footer>
           <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>
           <div><a href="https://github.com/dimagmercan" target="_blank">Open-source code</a> by <a href="https://www.linkedin.com/in/dimagmercan/" target="_blank"> Dimag Mercan</a></div>
           <div> Hosted by <a href="https://www.netlify.com/" target="_blank"> Netlify</a></div>
 </footer>
 <script src="src/script.js"></script>
-</body>
+    </body>
 </html>
