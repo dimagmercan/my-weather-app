@@ -60,7 +60,7 @@ function formatDay(timestamp) {
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row mb-3">`;
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 6 && index > 0) {
@@ -75,7 +75,7 @@ function displayForecast(response) {
               src="images/svg/${forecastDay.weather[0].icon}.svg"
               width="50px"
             />
-            <h6 class="card-subtitle mb-2 text-muted">
+            <h6 class="card-subtitle mt-3 text-muted">
               <strong>${Math.round(
                 forecastDay.temp.max
               )}°</strong> ${Math.round(forecastDay.temp.min)}°

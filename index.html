@@ -16,50 +16,62 @@
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
+  
   <body>
+
     <div class="container border border-2 rounded p-3">
-      <div class="row">
-        <div class="col-12">
-            <form id="search-form">
-            <div class="input-group mb-3">
-                <input type="search" class="form-control" placeholder="Search places" aria-label="Search places" aria-describedby="button-addon2" id="search-text-input">
-                <button class="btn-search" type="button" id="search-button">🔍</button>
-                <button class="btn-location" type="button" id="location-button">📍</button>
+      
+        <div class="row">
+            <div class="col-12">
+                <form id="search-form">
+                    <div class="input-group mb-3">
+                        <input type="search" class="form-control " placeholder="Search places" aria-label="Search places" aria-describedby="button-addon2" id="search-text-input">
+                        <button class="btn-search" type="button" id="search-button">🔍</button>
+                        <button class="btn-location" type="button" id="location-button">📍</button>
+                    </div>
+                </form>
             </div>
-            </form>
         </div>
+    
+        <div class="row mb-3">
+
+            <div class="col-4">
+                <h1 id="city"></h1>
+                    <p class="day" id="day"></p>
+                    <p class="time" id="time"></p>
+            </div>
+
+            <div class="col-4">
+                <h2> <span class="temperature" id="temperature"></span><span class="units"><a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span></h2>
+                    <ul>
+                        <li>Feels like <span id="feels-like"></span>°</li>
+                        <li><span id="description"></span></li>
+                        <li>Day <span id="temp-max"></span>°↑ Night <span id="temp-min"></span>°↓</li>
+                        <li>Wind Speed: <span id="wind"></span> m/s</li>
+                    </ul>
+            </div>
+        
+            <div class="col-4">
+            <img src="" width="150px" class="float-right" id="icon"/>
+            </div>
+
+        </div>
+
+        <div class="forecast-container" id="forecast">
+            
+    </div>
+
+    <div class="">
+        <footer>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>
+            <div><a href="https://github.com/dimagmercan" target="_blank">Open-source code</a> by <a href="https://www.linkedin.com/in/dimagmercan/" target="_blank"> Dimag Mercan</a></div>
+            <div> Hosted by <a href="https://www.netlify.com/" target="_blank"> Netlify</a></div>
+        </footer>
     </div>
     
-      <div class="row">
-        <div class="col-4">
-        <h1 id="city"></h1>
-            <p class="day" id="day"></p>
-            <p class="time" id="time"></p>
-        </div>
+    <script src="src/script.js"></script>
+</body>
 
-        <div class="col-4">
-          <h2> <span class="temperature" id="temperature"></span><span class="units"><a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span></h2>
-            <ul>
-                <li>Feels like <span id="feels-like"></span>°</li>
-                <li><span id="description"></span></li>
-                <li>Day <span id="temp-max"></span>°↑ Night <span id="temp-min"></span>°↓</li>
-                <li>Wind Speed: <span id="wind"></span> m/s</li>
-            </ul>
-        </div>
-        
-        <div class="col-4">
-          <img src="" width="150px" class="float-right" id="icon"/>
-        </div>
-      </div>
+    
 
-     <div class="forecast-container" id="forecast">
-     </div>
-
-<footer>
-          <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>
-          <div><a href="https://github.com/dimagmercan" target="_blank">Open-source code</a> by <a href="https://www.linkedin.com/in/dimagmercan/" target="_blank"> Dimag Mercan</a></div>
-          <div> Hosted by <a href="https://www.netlify.com/" target="_blank"> Netlify</a></div>
-</footer>
-<script src="src/script.js"></script>
-    </body>
 </html>
