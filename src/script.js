@@ -41,31 +41,50 @@ pDay.innerHTML = `${date} ${month} ${year} ${day}`;
 let pTime = document.querySelector("p.time");
 pTime.innerHTML = `${hour}:${minute}`;
 
+function formatDay(timestamp) {
+  let forecastDate = new Date(timestamp * 1000);
+  let forecastDay = forecastDate.getDay();
+  let forecastDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return forecastDays[forecastDay];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Tuesday", "Wednesday", "Thursday", "Friday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6 && index > 0) {
+      forecastHTML =
+        forecastHTML +
+        `
       <div class="col-sm">
         <div class="card text-center">
           <div class="card-body">
-            <h4 class="card-title">${day}</h4>
+            <h4 class="card-title">${formatDay(forecastDay.dt)}</h4>
             <img
-              src="images/svg/018-snowflake.svg"
+              src="images/svg/${forecastDay.weather[0].icon}.svg"
               width="50px"
-              class="forecast-img"
             />
             <h6 class="card-subtitle mb-2 text-muted">
-              <strong>8°</strong> 1°
+              <strong>${Math.round(
+                forecastDay.temp.max
+              )}°</strong> ${Math.round(forecastDay.temp.min)}°
             </h6>
           </div>
         </div>
       </div>
     `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
