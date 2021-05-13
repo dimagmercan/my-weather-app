@@ -178,4 +178,4 @@ celsiusElement.addEventListener("click", convertCelsius);
 
 let celsiusTemp = null;
 
-search("New York");
+search("Berlin");
